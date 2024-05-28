@@ -1,0 +1,95 @@
+﻿@rendermode InteractiveServer
+
+    <div class="authentication-wrapper">
+@if(isLogin)
+{
+        <form action="/submit_login" method="post">
+            <h1>Log In</h1>
+
+            <div class="row">
+                <label for="username">Username:</label>
+            </div>
+            <div class="row">
+                <input type="text" id="username" name="username" required placeholder="Username">
+            </div>
+
+            <div class="row">
+                <label for="password">Password:</label>
+            </div>
+            <div class="row">
+                <input type="password" id="password" name="password" required placeholder="Password">
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Log In">
+            </div>
+
+            <p class="tooltip">
+                Don't have an account?
+                <a @onclick="ToggleForm">Sign up</a>
+            </p>
+        </form>
+}
+else
+{
+        <form action="/submit_registration" method="post">
+            <h1>Sign Up</h1>
+
+            <div class="row">
+                <label for="username">Username:</label>
+            </div>
+
+            <div class="row">
+                <input type="text" id="username" name="username" required placeholder="Username">
+            </div>
+
+            <div class="row">
+                <input type="text" id="first_name" name="first_name" required placeholder="First Name">
+
+                <input type="text" id="last_name" name="last_name" required placeholder="Last Name">
+            </div>
+
+            <div class="row">
+                <label for="email">Email:</label>
+            </div>
+
+            <div class="row">
+                <input type="email" id="email" name="email" required placeholder="Email">
+            </div>
+
+            <div class="row">
+                <label for="password">Password:</label>
+            </div>
+
+            <div class="row">
+                <input type="password" id="password" name="password" required placeholder="Password">
+            </div>
+
+            <div class="row">
+                <label for="confirm_password">Confirm Password:</label>
+            </div>
+
+            <div class="row">
+                <input type="password" id="confirm_password" name="confirm_password" required placeholder="Confirm Password">
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Register">
+            </div>
+
+            <p class="tooltip">
+                Already have an account?
+                <a @onclick="ToggleForm">Log in</a>
+            </p>
+        </form>
+}
+    </div>
+
+@code {
+    private bool isLogin = true;
+
+    private void ToggleForm()
+    {
+        isLogin = !isLogin;
+    }
+}

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Poppins';
+    color: white;
+
+    --col1: #353a40;
+    --col2: #212429;
+    --col3: #6c747e;
+    --col4: #338c80;
+}
+
+body {
+    background-color: var(--col1);
+}
+
+.authentication-wrapper {
+    margin: 5rem auto;
+}
+    .authentication-wrapper form {
+        background-color: var(--col2);
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        user-select: none;
+        filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px);
+    }
+
+        .authentication-wrapper form h1 {
+            text-align: center;
+        }
+
+        .authentication-wrapper form .row {
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 0.5rem 0;
+        }
+
+            .authentication-wrapper form .row input, .authentication-wrapper form .row label {
+                flex: 1 1 100%;
+            }
+
+            .authentication-wrapper form .row input {
+                background-color: var(--col3);
+                border: none;
+                margin: 0 5px;
+                padding: 10px;
+                border-radius: 0.5rem;
+                width: 100%;
+            }
+
+            .authentication-wrapper form .row label {
+                margin: 0 5px;
+                font-weight: 500;
+            }
+
+            .authentication-wrapper form .row input[type="submit"] {
+                background-color: var(--col4);
+                border: none;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                margin: 0 auto;
+                text-transform: uppercase;
+                border-radius: 5rem;
+                max-width: fit-content;
+                font-weight: 600;
+            }
+
+        .authentication-wrapper form .tooltip {
+            font-size: 0.8rem;
+            text-align: end;
+            margin: 0.5rem;
+        }
+
+            .authentication-wrapper form .tooltip a {
+                color: var(--col4);
+                text-decoration: none;
+                font-weight: 700;
+            }

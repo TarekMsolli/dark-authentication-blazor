@@ -1,0 +1,28 @@
+﻿<div class="authentication-wrapper">
+    <form action="/submit_login" method="post">
+        <h1>Log In</h1>
+
+        <div class="row">
+            <label for="username">Username:</label>
+        </div>
+        <div class="row">
+            <input type="text" id="username" name="username" required placeholder="Username">
+        </div>
+
+        <div class="row">
+            <label for="password">Password:</label>
+        </div>
+        <div class="row">
+            <input type="password" id="password" name="password" required placeholder="Password">
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Log In">
+        </div>
+
+        <p class="tooltip">
+            Don't have an account?
+            <a href="/register">Sign up</a>
+        </p>
+    </form>
+</div>
